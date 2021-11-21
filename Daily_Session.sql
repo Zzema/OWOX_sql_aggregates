@@ -11,7 +11,7 @@ INSERT INTO
   order_id,
   transactionRevenue,
   region,
-  type,
+  type_ip,
   user_id,
   owox_user_id,
   landing_page,
@@ -41,7 +41,7 @@ SELECT
     # if you want to select bots separately, according to a certain criterion
     #when max(IF(hits.isEntrance=1 AND hits.pagePath='/',1,0))=1 and max(IF(hits.isExit=1 AND hits.pagePath='/personal/checkout/',1,0))=1 and max(trafficSource.source)='(direct)' and max(trafficSource.medium)='(none)' and max(totals.pageviews)=4 and max(strim.device.browser)='Chrome'
     #then "Боты"  
-    else "Other" end type,
+    else "Other" end type_ip,
     CAST(max(user.id) AS INT64) user_id,
     max(user.owoxid) owox_user_id,
     
