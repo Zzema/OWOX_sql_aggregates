@@ -1,7 +1,7 @@
 # OWOX_sql_aggregates
 SQL templates for aggregate tables
 
-<h2>Daily session structure:</h2>
+<h2>Daily_session structure:</h2>
 
 |    | Field name          | Type       | Mode     | Description                                                                                                                                                                                                                                                               |
 |----|---------------------|------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -29,3 +29,26 @@ SQL templates for aggregate tables
 | 22 | qty_detail_products | INTEGER    | NULLABLE | count views of product page (hits.eCommerceAction.action_type='detail' )                                                                                                                                                                                                  |
 | 23 | qty_add_products    | INTEGER    | NULLABLE | count products add to cart (hits.eCommerceAction.action_type='add')                                                                                                                                                                                                       |
 | 24 | qty_step_1          | INTEGER    | NULLABLE | first step of ckeckout (hits.eCommerceAction.action_type='checkout' and hits.eCommerceAction.step=1)                                                                                                                                                                      |
+<h2>Daily_Result structure:</h2>
+|    | Field name         | Type    | Description |
+|----|--------------------|---------|-------------|
+| 1  | medium             | STRING  |             |
+| 2  | source             | STRING  |             |
+| 3  | device_cat         | STRING  |             |
+| 4  | ses_region         | STRING  |             |
+| 5  | campaign           | STRING  |             |
+| 6  | date               | DATE    |             |
+| 7  | hostname           | STRING  |             |
+| 8  | type_ad            | STRING  |             |
+| 9  | type_traffic       | STRING  |             |
+| 10 | traffic            | INTEGER |             |
+| 11 | transactionId      | STRING  |             |
+| 12 | order_source       | INTEGER |             |
+| 13 | revenue            | FLOAT   |             |
+| 14 | cost               | INTEGER |             |
+| 15 | ses_time           | INTEGER |             |
+| 16 | pages              | INTEGER |             |
+| 17 | bounces            | INTEGER |             |
+| 18 | if_detail_products | INTEGER |             |
+| 19 | if_add_products    | INTEGER |             |
+| 20 | if_qty_step_1      | INTEGER |             |
