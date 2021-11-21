@@ -30,6 +30,7 @@ SQL templates for aggregate tables
 | 23 | qty_add_products    | INTEGER    | NULLABLE | count products add to cart (hits.eCommerceAction.action_type='add')                                                                                                                                                                                                       |
 | 24 | qty_step_1          | INTEGER    | NULLABLE | first step of ckeckout (hits.eCommerceAction.action_type='checkout' and hits.eCommerceAction.step=1)                                                                                                                                                                      |
 <h2>Daily_Result structure:</h2>
+
 |    | Field name         | Type    | Description |
 |----|--------------------|---------|-------------|
 | 1  | medium             | STRING  |             |
