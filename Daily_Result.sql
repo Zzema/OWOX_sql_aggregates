@@ -1,5 +1,5 @@
-#DELETE FROM `spry-compound-139714.Reports_Svod.Daily_Campaign3_Result` WHERE true
-#INSERT INTO `spry-compound-139714.Reports_Svod.Daily_Campaign3_Result`  ( medium, source, device_cat, ses_region, campaign, date, hostname, ses_type, traffic, transactionId, order_source, revenue, cost, ses_time, pages, bounces, if_detail_products, if_add_products, if_qty_step_1)
+#DELETE FROM `test_db-2756.Reports_Svod.Daily_Campaign3_Result` WHERE true
+#INSERT INTO `test_db-2756.Reports_Svod.Daily_Campaign3_Result`  ( medium, source, device_cat, ses_region, campaign, date, hostname, ses_type, traffic, transactionId, order_source, revenue, cost, ses_time, pages, bounces, if_detail_products, if_add_products, if_qty_step_1)
 --type_ses,type_ad
 
 SELECT
@@ -67,17 +67,17 @@ FROM (SELECT
     max(qty_step_1) qty_step_1   
     
     
-  FROM `vipavenue-6f9d1.Reports_Reg.Daily_Session` ses
+  FROM `test_db-2756.Reports_Reg.Daily_Session` ses
         
    
 
-  LEFT JOIN (SELECT * FROM `vipavenue-6f9d1`.`Dictionary.campaign_old_new` ) tmp
+  LEFT JOIN (SELECT * FROM `test_db-2756`.`Dictionary.campaign_old_new` ) tmp
   ON   tmp.medium=ses.medium  AND tmp.source=ses.source   AND tmp.campaign_old=ses.campaign
-  LEFT JOIN (SELECT * FROM `vipavenue-6f9d1`.`Dictionary.medium_old_medium_new` ) tmp2
+  LEFT JOIN (SELECT * FROM `test_db-2756`.`Dictionary.medium_old_medium_new` ) tmp2
   ON   tmp2.medium_old=ses.medium
-  LEFT JOIN (SELECT * FROM `vipavenue-6f9d1`.`Dictionary.source_old_campaign_new` ) tmp3
+  LEFT JOIN (SELECT * FROM `test_db-2756`.`Dictionary.source_old_campaign_new` ) tmp3
   ON   tmp3.source_old=ses.source
-  LEFT JOIN (SELECT * FROM `vipavenue-6f9d1`.`Dictionary.source_old_source_new` ) tmp4
+  LEFT JOIN (SELECT * FROM `test_db-2756`.`Dictionary.source_old_source_new` ) tmp4
   ON   tmp4.source_old=ses.source
   LEFT JOIN (SELECT region, region_new FROM `vipavenue-6f9d1`.`Dictionary.Regions` ) tmp5
   ON tmp5.region=ses.region
