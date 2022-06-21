@@ -88,7 +88,7 @@ SELECT
     hits.transaction.transactionId transactionId,date,min(hits.time),
     SUM(product.productPrice*product.productQuantity) Revenue
   FROM
-    `vipavenue-6f9d1.OWOXBI_Streaming.owoxbi_sessions_*`,
+    `project_name.OWOXBI_Streaming.owoxbi_sessions_*`,
     UNNEST(hits) AS hits,  UNNEST (hits.product) AS product
   WHERE
     _TABLE_SUFFIX BETWEEN FORMAT_DATE("%Y%m%d",DATE_SUB(CURRENT_DATE, INTERVAL 6 day)) #"2021-02-01") 
